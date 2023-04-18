@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+666
+<button onclick="getById(3)">button</button>
+
+<div class="content"></div>
+</body>
+<script src="/js/jquery-3.3.1.min.js"></script>
+<script>
+
+    function getById(obj){
+        console.log(obj)
+        $.ajax({
+            url:"/user/"+obj,
+            success:function (data){
+                console.log(data)
+                $(".content").append(data.id)
+                $(".content").append(data.name)
+            }
+        })
+    }
+
+</script>
+</html>

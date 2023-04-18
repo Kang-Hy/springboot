@@ -1,0 +1,33 @@
+#druid
+spring:
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/spring_db?useSSL=false
+      username: root
+      password: 123456
+  main:
+    banner-mode: off
+
+
+
+#mybatis-plus日志
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#spring日志
+logging:
+  level:
+    root: info
+#  file:
+#    name: s.log
+#  logback:
+#    rollingpolicy:
+#      max-file-size: 10MB
+#      file-name-pattern: s.%d{yyyy-MM-dd}.%i.log
+
+
+
+peoples:
+  my-Name: khy1
+  mya-ge: 26
